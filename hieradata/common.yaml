@@ -1,1 +1,7 @@
 ---
+resolv_conf::search:
+  - ism.local
+  - isminc.com
+resolv_conf::nameserver:
+  - 10.10.21.9
+  - 10.10.21.10
