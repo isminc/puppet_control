@@ -1,7 +1,7 @@
 forge "http://forge.puppetlabs.com"
 
 # Forge modules
-mod "jonnyx/resolv_conf", '1.0.4'
+mod "jonnyx/resolv_conf"
 mod "puppetlabs/concat"
 mod "puppetlabs/inifile"
 mod "puppetlabs/firewall"
