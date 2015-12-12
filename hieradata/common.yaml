@@ -6,4 +6,4 @@ profiles::base::dns_nameserver:
   - 10.10.21.9
   - 10.10.21.10
 
-profiles::base::rsyslog_server: syslog.ism.local
+profiles::base::rsyslog_server: 'syslog.ism.local'

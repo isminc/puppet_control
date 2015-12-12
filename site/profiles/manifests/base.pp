@@ -45,7 +45,7 @@ class profiles::base (
   }
 
   # Central Logging
-  class { 'rsyslog::client':
+  class { 'rsyslog::client::server':
     remote_servers => $rsyslog_server,
   }
 
