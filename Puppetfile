@@ -14,8 +14,8 @@ mod "stahnma/epel"
 mod "thias/sysctl"
 
 # Site modules
-mod 'profiles',
-  :git => 'https://github.com/isminc/puppet-profiles.git'
+#mod 'profiles',
+#  :git => 'https://github.com/isminc/puppet-profiles.git'
 
-mod 'roles',
-  :git => 'https://github.com/isminc/puppet-roles.git'
+#mod 'roles',
+#  :git => 'https://github.com/isminc/puppet-roles.git'
