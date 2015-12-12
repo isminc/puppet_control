@@ -5,7 +5,7 @@
 class profiles::base (
   $dns_search,
   $rsyslog_server,
-  $dns_nameserver = '127.0.0.1'
+  $dns_nameserver,
 ) {
 
   # Acurate time
@@ -41,7 +41,7 @@ class profiles::base (
   # DNS
   class { 'resolv_conf':
     search     => $dns_search,
-    nameserver => $dns_namserver,
+    nameserver => [ $dns_namserver ],
   }
 
   # Central Logging
