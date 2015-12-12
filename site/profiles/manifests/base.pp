@@ -4,7 +4,7 @@
 #
 class profiles::base (
   #$dns_search,
-  $rsyslog_server,
+  #$rsyslog_server,
   #$dns_nameserver = '127.0.0.1'
 ) {
 
