@@ -10,12 +10,6 @@ mod "puppetlabs/postgresql"
 mod "puppetlabs/puppetdb"
 mod "puppetlabs/stdlib"
 mod "puppetlabs/vcsrepo"
+mod "saz/rsyslog"
 mod "stahnma/epel"
 mod "thias/sysctl"
-
-# Site modules
-#mod 'profiles',
-#  :git => 'https://github.com/isminc/puppet-profiles.git'
-
-#mod 'roles',
-#  :git => 'https://github.com/isminc/puppet-roles.git'

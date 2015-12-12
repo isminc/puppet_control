@@ -3,9 +3,9 @@
 # == Description: Base profile for ISM servers
 #
 class profiles::base (
-  #$dns_search,
-  #$rsyslog_server,
-  #$dns_nameserver = '127.0.0.1'
+  $dns_search,
+  $rsyslog_server,
+  $dns_nameserver = '127.0.0.1'
 ) {
 
   # Acurate time
@@ -39,14 +39,14 @@ class profiles::base (
   }
 
   # DNS
-  #class { 'resolv_conf':
-  #  search     => $dns_search,
-  #  nameserver => $dns_namserver,
-  #}
+  class { 'resolv_conf':
+    search     => $dns_search,
+    nameserver => $dns_namserver,
+  }
 
   # Central Logging
-  #class { 'rsyslog::client':
-  #  remote_servers => $rsyslog_server,
-  #}
+  class { 'rsyslog::client':
+    remote_servers => $rsyslog_server,
+  }
 
 }
