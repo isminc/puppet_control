@@ -41,7 +41,7 @@ class profiles::base (
   # DNS
   class { 'resolv_conf':
     search     => $dns_search,
-    nameserver => $dns_namserver,
+    nameserver => $dns_nameserver,
   }
 
   # Central Logging
