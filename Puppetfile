@@ -1,7 +1,7 @@
 forge "http://forge.puppetlabs.com"
 
 # Forge modules
-mod "jonnyx/resolv_conf"
+#mod "jonnyx/resolv_conf"
 mod "puppetlabs/concat"
 mod "puppetlabs/inifile"
 mod "puppetlabs/firewall"
@@ -13,3 +13,6 @@ mod "puppetlabs/vcsrepo"
 mod "saz/rsyslog"
 mod "stahnma/epel"
 mod "thias/sysctl"
+
+mod 'resolv_conf',
+  :git => 'https://github.com/jonmosco/puppet-resolv_conf'
