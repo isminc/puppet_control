@@ -23,7 +23,7 @@ class profiles::monitoring {
     use                 => 'generic-service',
     host_name           => $::fqdn,
     notification_period => '24x7',
-    check_command       => 'check_nrpe!check_hda1',
+    check_command       => 'check_nrpe!check_disk',
     service_description => 'Check disk',
   }
 
