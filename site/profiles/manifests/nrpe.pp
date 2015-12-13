@@ -8,7 +8,7 @@ class profiles::nrpe {
 
   nrpe::command { 'check_disk':
     ensure  => present,
-    command => 'check_disk -w 20% -c 10% -p /dev/hda1'
+    command => 'check_disk -w 20% -c 10% -p /'
   }
 
   nrpe::command { 'check_load':
