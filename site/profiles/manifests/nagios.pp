@@ -3,7 +3,7 @@
 class profiles::nagios {
 
   # collect resources and populate /etc/nagios/nagios_*.cfg
-  Nagios_host <<||>
-  Nagios_service <<||>
+  Nagios_host <<||>>
+  Nagios_service <<||>>
 
 }
