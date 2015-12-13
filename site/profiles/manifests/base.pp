@@ -46,7 +46,18 @@ class profiles::base (
 
   # Central Logging
   class { 'rsyslog::client':
-    server => $rsyslog_server,
+    preserve_fqdn => true,
+    server        => $rsyslog_server,
+    log_templates => [
+      {
+        name     => 'TmplAuth',
+        template => '/var/log/rsyslog_custom/%HOSTNAME%/%PROGRAMNAME%.log',
+      },
+      {
+        name     => 'TmplMsg',
+        template => '/var/log/rsyslog_custom/%HOSTNAME%/%PROGRAMNAME%.log',
+      },
+    ]
   }
 
 }
