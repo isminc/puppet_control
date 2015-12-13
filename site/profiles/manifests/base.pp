@@ -17,7 +17,7 @@ class profiles::base (
   }
 
   # Ubuntu
-  if $::osfamily == 'Debian' {
+  if $::osfamily == 'Debian' and $::is_virtual {
 
     # Pick correct APT source
     $ovirt_apt_repo = $::lsbdistrelease ? {
