@@ -46,7 +46,6 @@ class profiles::base (
 
   # Central Logging
   class { 'rsyslog::client':
-    preserve_fqdn => true,
     server        => $rsyslog_server,
     log_templates => [
       {
