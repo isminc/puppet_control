@@ -6,4 +6,10 @@ class profiles::nagios {
   Nagios_host <<||>>
   Nagios_service <<||>>
 
+  service { 'nagios':
+    ensure     => running,
+    enable     => true,
+    hasrestart => true,
+  }
+
 }
