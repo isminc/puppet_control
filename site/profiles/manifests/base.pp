@@ -17,26 +17,26 @@ class profiles::base (
   }
 
   # Ubuntu
-  if $::osfamily == 'Debian' and $::is_virtual {
+  #if $::osfamily == 'Debian' and $::is_virtual {
 
-    # Pick correct APT source
-    $ovirt_apt_repo = $::lsbdistrelease ? {
-      '12.04'  => 'http://download.opensuse.org/repositories/home:/evilissimo:/ubuntu:/12.04/xUbuntu_12.04/',
-      '14.04'  => 'http://download.opensuse.org/repositories/home:/evilissimo:/ubuntu:/14.04/xUbuntu_14.04/',
-      default  => fail('This verison is not supported')
-    }
+  #  # Pick correct APT source
+  #  $ovirt_apt_repo = $::lsbdistrelease ? {
+  #    '12.04'  => 'http://download.opensuse.org/repositories/home:/evilissimo:/ubuntu:/12.04/xUbuntu_12.04/',
+  #    '14.04'  => 'http://download.opensuse.org/repositories/home:/evilissimo:/ubuntu:/14.04/xUbuntu_14.04/',
+  #    default  => fail('This verison is not supported')
+  #  }
 
-    apt::source { 'ovirt_tools':
-      comment    => 'Ovirt Guest VM Tools',
-      location   => $ovirt_apt_repo,
-      release    => '',
-      repos      => 'main',
-      key        => {
-        'id'     => '',
-        'server' => '',
-      },
-    }
-  }
+  #  apt::source { 'ovirt_tools':
+  #    comment    => 'Ovirt Guest VM Tools',
+  #    location   => $ovirt_apt_repo,
+  #    release    => '',
+  #    repos      => 'main',
+  #    key        => {
+  #      'id'     => '',
+  #      'server' => '',
+  #    },
+  #  }
+  #}
 
   # DNS
   class { 'resolv_conf':
