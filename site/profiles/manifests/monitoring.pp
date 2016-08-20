@@ -8,19 +8,19 @@ class profiles::monitoring {
     ensure  => present,
     alias   => $::hostname,
     address => $::ipaddress,
-    use     => 'linux-server',
+    use     => 'linux-server,host-pnp',
   }
 
   @@nagios_service { "check_ping_${::hostname}":
     check_command       => 'check_ping!100.0,20%!500.0,60%',
-    use                 => 'generic-service',
+    use                 => 'generic-service,srv-pnp',
     host_name           => $::fqdn,
     notification_period => '24x7',
     service_description => 'Check ping',
   }
 
   @@nagios_service { "check_disk_${::hostname}":
-    use                 => 'generic-service',
+    use                 => 'generic-service,srv-pnp',
     host_name           => $::fqdn,
     notification_period => '24x7',
     check_command       => 'check_nrpe!check_disk',
@@ -28,7 +28,7 @@ class profiles::monitoring {
   }
 
   @@nagios_service { "check_load_${::hostname}":
-    use                 => 'generic-service',
+    use                 => 'generic-service,srv-pnp',
     host_name           => $::fqdn,
     notification_period => '24x7',
     check_command       => 'check_nrpe!check_load',
