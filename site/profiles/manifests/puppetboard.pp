@@ -6,8 +6,8 @@ class profiles::puppetboard {
   class { 'apache': }
   # Configure Puppetboard
   class { 'puppetboard':
-    manage_git        => true,
-    manage_virtualenv => true,
+    manage_git        => false,
+    manage_virtualenv => false,
   }
   class { 'puppetboard::apache::vhost':
     vhost_name => 'pboard.puppet.ism.local',
