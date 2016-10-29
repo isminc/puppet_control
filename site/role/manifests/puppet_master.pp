@@ -5,5 +5,6 @@ class role::puppet_master {
   include profiles::monitoring
   include profiles::nrpe
   include profiles::puppet_master
+  include profiles::puppetboard
   include profiles::puppetdb
 }
