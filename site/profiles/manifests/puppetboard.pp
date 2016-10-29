@@ -13,7 +13,7 @@ class profiles::puppetboard {
   # Configure Puppetboard
   class { 'puppetboard': }
   class { 'puppetboard::apache::vhost':
-    vhost_name => 'pboard.puppet.ism.local',
+    vhost_name => 'pboard.ism.local',
     port       => 80,
   }
 
