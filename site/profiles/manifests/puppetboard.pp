@@ -11,10 +11,7 @@ class profiles::puppetboard {
   # Configure Apache on this server
   class { 'apache': }
   # Configure Puppetboard
-  class { 'puppetboard':
-    manage_git        => latest,
-    manage_virtualenv => latest,
-  }
+  class { 'puppetboard': }
   class { 'puppetboard::apache::vhost':
     vhost_name => 'pboard.puppet.ism.local',
     port       => 80,
