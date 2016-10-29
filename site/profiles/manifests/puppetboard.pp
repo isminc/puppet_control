@@ -5,7 +5,10 @@ class profiles::puppetboard {
   # Configure Apache on this server
   class { 'apache': }
   # Configure Puppetboard
-  class { 'puppetboard': }
+  class { 'puppetboard':
+    manage_git        => true,
+    manage_virtualenv => true,
+  }
   class { 'puppetboard::apache::vhost':
     vhost_name => 'pboard.puppet.ism.local',
     port       => 80,
